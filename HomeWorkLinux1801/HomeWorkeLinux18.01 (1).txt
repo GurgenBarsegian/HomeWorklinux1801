@@ -1,0 +1,71 @@
+   0 cd /
+   1 mkdir -p home/user/start
+   2 touch home/user/start/1.txt
+   3 echo "Start" > home/user/start/1.txt 
+   4 date >> home/user/start/1.txt 
+   5 mkdir opt/task
+   6 cp home/user/start/1.txt opt/task/start.txt
+   7 ls -al / | tail -4 >> opt/task/start.txt
+   8 cp -r opt/task tmp/testnew
+   9 cat opt/temu/readme.txt >> tmp/testnew/start.txt 
+  10 rm -r opt/task
+  11 cat tmp/testnew/start.txt 
+  12 histoty
+  13 history
+  14 history >> history.txt
+
+localhost:~# cd /
+localhost:/# mkdir -p home/user/start
+localhost:/# touch home/user/start/1.txt
+localhost:/# echo "Start" > home/user/start/1.txt
+localhost:/# date >> home/user/start/1.txt
+localhost:/# mkdir opt/task
+localhost:/# cp home/user/start/1.txt opt/t
+task/  temu/
+localhost:/# cp home/user/start/1.txt opt/task/start.txt
+localhost:/# ls -al / | tail -4 >> opt/task/start.txt
+localhost:/# cp -r opt/task tmp/testnew
+localhost:/# cat opt/temu/readme.txt >> tmp/testnew/start.txt
+localhost:/# rm -r opt/task
+localhost:/# cat tmp/testnew/start.txt
+Start
+Fri Feb  2 16:46:23 UTC 2024
+dr-xr-xr-x   12 root     root             0 Feb  2 16:45 sys
+drwxrwxrwt    2 root     root            37 Jan  9  2021 tmp
+drwxr-xr-x   10 root     root           229 Jun 24  2020 usr
+drwxr-xr-x   16 root     root           348 Aug 27  2020 var
+his directory contains a TinyEMU configuration example to run
+inside JSLinux. Just try:
+ 
+temu root-x86.cfg
+ 
+(exit with Ctrl-a x)
+ 
+JSLinux emulates the SVM x86 virtualization instructions, the JSLinux
+"host" Linux kernel supports KVM and TinyEMU supports KVM too, so the
+emulated x86 system is not much slower than JSLinux.
+ 
+You can use "mount -t 9p /dev/root /mnt" to access the JSLinux root
+filesystem from "/mnt" inside the VM. As an exercice, you can iterate:
+run temu inside temu inside JSLinux (hint: you can use chroot and
+reduce the memory usage of the VM with the "-m" option).
+ocalhost:/# histoty
+sh: histoty: not found
+localhost:/# history
+   0 cd /
+   1 mkdir -p home/user/start
+   2 touch home/user/start/1.txt
+   3 echo "Start" > home/user/start/1.txt
+   4 date >> home/user/start/1.txt
+   5 mkdir opt/task
+   6 cp home/user/start/1.txt opt/task/start.txt
+   7 ls -al / | tail -4 >> opt/task/start.txt
+   8 cp -r opt/task tmp/testnew
+   9 cat opt/temu/readme.txt >> tmp/testnew/start.txt
+  10 rm -r opt/task
+  11 cat tmp/testnew/start.txt
+  12 histoty
+  13 history
+localhost:/# history >> history.txt
+localhost:/# export_file history.txt
+
